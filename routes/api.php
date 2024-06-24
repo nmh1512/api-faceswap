@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\FaceswapController;
+use App\Http\Controllers\Api\ModelImageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::post('faceswap', [FaceswapController::class, 'faceswap']);
+Route::get('store-themes', [ModelImageController::class, 'storeThemes']);
+Route::get('get-themes', [ModelImageController::class, 'getThemes']);
+Route::get('store-images', [ModelImageController::class, 'storeImages']);
+
+
+
 

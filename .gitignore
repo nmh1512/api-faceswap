@@ -21,4 +21,7 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
 faceswap/models
+faceswap/__pycache__
+faceswap/credentials
